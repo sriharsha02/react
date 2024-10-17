@@ -1,100 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "abc" },
-  "Hello World from Namaste React"
-);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
-
+//React Element --> Object --> HTML Element (rendering to DOM)
+const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
 console.log(heading);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//Exercise problem
+// root.render(heading);
 
-/*
+//JSX
 
-div id = parent
-  div id = child
-      h1
-  div
-div
+const jsxHeading = <h1>Namaste React using JSX</h1>;
 
-
-*/
-
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h2", {}, "Hello from h2 tag")
-  )
-);
-
-const root2 = ReactDOM.createRoot(document.getElementById("root"));
-
-root2.render(parent);
-console.log(parent);
-
-/*
-
-div id = parent
-  div id = child
-      h1
-      h2
-  div
-div
-
-*/
-
-const parent2 = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "Hello from h1 tag"),
-    React.createElement("h2", {}, "I am from h2 tag"),
-  ])
-);
-
-const root3 = ReactDOM.createRoot(document.getElementById("root"));
-
-root2.render(parent2);
-console.log(parent2);
-
-/*
-div id = parent
-  div id = child
-      h1
-      h2
-  div
-div
-div id = parent
-  div id = child
-      h1
-      h2
-  div
-div
-
-
-
-
-*/
-
-const parent3 = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "Hello from h1 tag"),
-    React.createElement("h2", {}, "I am from h2 tag"),
-  ]),
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "Hello from h1 tag"),
-    React.createElement("h2", {}, "I am from h2 tag"),
-  ]),
-]);
-
-const root4 = ReactDOM.createRoot(document.getElementById("root"));
-
-root2.render(parent2);
-console.log(parent2);
+console.log(jsxHeading);
+root.render(jsxHeading);
