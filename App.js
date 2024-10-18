@@ -1,39 +1,47 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Logo from "./Images/food-app-logo.png";
 
-//JSX
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - restaurant container
+ *   - restaurant cards
+ * Footer
+ * - copyright
+ * - links
+ * - address
+ * - contact
+ */
 
-const heading = <h1>Namaste React using JSX</h1>;
-console.log(heading);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src={Logo}></img>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
-
-//React Component
-//class based component --> old way
-//functional component --> new way
-
-//React Functional Component --> A normal JS function
-
-const TitleComponent = () => {
-  return <h1>Title from Namaste React</h1>;
-};
-// const HeadingComponent = () => {
-//   <TitleComponent />;
-//   return <h1>Namaste React Functional Component</h1>;
-// };
-
-const number = 1000;
-//Another way of writing without return
-const HeadingComponent = () => (
-  <div id="container">
-    {heading}
-    <TitleComponent />
-    <TitleComponent></TitleComponent>
-    {TitleComponent()}
-    <h1 className="heading">Namaste React Functional Component</h1>
-  </div>
-);
-
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
