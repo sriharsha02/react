@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Logo from "./Images/food-app-logo.png";
-import Meghana from "./Images/meghanaFoods.avif";
+import Logo from "../Images/food-app-logo.png";
+import Meghana from "../Images/meghanaFoods.avif";
 
 /**
  * Header
