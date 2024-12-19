@@ -2,42 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Logo from "../Images/food-app-logo.png";
 import Meghana from "../Images/meghanaFoods.avif";
-
-/**
- * Header
- * - Logo
- * - Nav Items
- * Body
- * - Search
- * - restaurant container
- *   - restaurant cards
- *      - image
- *      - name of the restaurant, cuisines, star rating, delivery time
- *
- * Footer
- * - copyright
- * - links
- * - address
- * - contact
- */
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={Logo}></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import Header from "./Header";
 
 const styleCard = {
   backgroundColor: "#F0F0F0",
