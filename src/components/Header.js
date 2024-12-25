@@ -1,4 +1,4 @@
-import Logo from "../Images/food-app-logo.png";
+import Logo from "../utils/Images/food-app-logo.png";
 const Header = () => {
   return (
     <div className="header">
