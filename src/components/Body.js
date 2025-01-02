@@ -7,7 +7,7 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            console.log();
+            console.log(resList);
             resList = resList.filter((res) => res.info.avgRating > 4);
             console.log(resList);
           }}
