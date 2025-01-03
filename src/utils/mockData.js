@@ -1,3 +1,4 @@
+//Normal JS Variable
 const resList = [
   {
     info: {
